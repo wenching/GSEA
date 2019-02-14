@@ -1,0 +1,92 @@
+---
+title: "Gene Set Enrichment Analysis"
+author:
+  - name: Wenching Calvin Chan, Ph.D.  
+    affiliation: Center for Research Informatics, University of Chicago, Chicago, IL 60637  
+    email: wchan10@bsd.uchicago.edu  
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+package: "Gene Set Enrichment Analysis"
+abstract: >
+  - TBC
+output:
+  html_document:
+    theme: united
+    highlight: tango
+    number_sections: true
+    df_print: paged
+    toc: true
+    toc_depth: 3
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    keep_md: true
+bibliography: GSEA.bib
+always_allow_html: yes
+vignette: >
+  %\VignetteIndexEntry{GSEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE, results='hide', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("knitr")
+library("kableExtra")
+library("png")
+library("grid")
+library("dplyr")
+library("captioner")
+
+fig_nums <- captioner::captioner()
+table_nums <- captioner::captioner(prefix = "Table")
+```
+
+<a name="Top"/>
+
+
+\newpage
+
+
+[Top](#Top)
+
+\newpage
+
+
+
+# Enrichment Analysis
+
+***
+
+* `r BiocStyle::Biocpkg("clusterProfiler")`: statistical analysis and visualization of functional profiles for genes and gene clusters
+
+```{r, echo = FALSE, out.width = '100%'}
+knitr::include_graphics(
+  file.path(
+    "IMG/clusterProfiler.GeneRatio.BgRatio.png"
+  )
+)
+```
+  
+**`r fig_nums(name = "GeneRatioNBgRatio", caption = "GeneRatio & BgRatio in clusterProfiler")`** GeneRatio = $\frac{M}{N}$ & BgRatio = $\frac{k}{n}$
+
+[Top](#Top)
+
+
+# Session information
+
+
+<!-- \blandscape -->
+```{r sessioninfo, echo = FALSE}
+print(sessionInfo())
+```  
+<!-- \elandscape -->
+
+
+
+[Top](#Top)
+
+
+
+# Reference  
+
+
