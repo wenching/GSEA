@@ -59,6 +59,8 @@ table_nums <- captioner::captioner(prefix = "Table")
 
 * `r BiocStyle::Biocpkg("clusterProfiler")`: statistical analysis and visualization of functional profiles for genes and gene clusters
 
+[What is GeneRatio and BgRatio?](https://www.biostars.org/p/220465/)
+
 ```{r, echo = FALSE, out.width = '100%'}
 knitr::include_graphics(
   file.path(
